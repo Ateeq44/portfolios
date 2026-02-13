@@ -1,3 +1,23 @@
+:root {
+    --cu-primary: black;
+    --cu-primary-dark: #0c2a7c;
+    --cu-primary-light: #dbeafe;
+    --cu-secondary: black;
+    --cu-dark: #0c2a7c;
+    --cu-light: #f8fafc;
+    --cu-white: #ffffff;
+    --cu-border: #e2e8f0;
+    --cu-success: #10b981;
+    --cu-error: #ef4444;
+    --cu-shadow-sm: 0 20px 40px -15px rgba(0, 0, 0, 0.1);
+    --cu-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.1);
+    --cu-shadow-lg: 0 20px 40px -15px rgba(0, 0, 0, 0.1);
+    --cu-shadow-xl: 0 20px 40px -15px rgba(0, 0, 0, 0.1);
+    --cu-radius: 12px;
+    --cu-radius-lg: 16px;
+    --cu-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 body{
     font-family: "Roboto", sans-serif;
 }
@@ -169,12 +189,10 @@ body{
     background: linear-gradient(135deg, #0c2a7c 0%, #0a58ca 100%) !important;
 }
 
-.testim .wrap {
-    position: relative;
-    width: 100%;
-    max-width: 1020px;
-    padding: 40px 20px;
-    margin: auto;
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show{
+    color: #0c2a7c;
+    font-weight: 700;
+    border-bottom: 2px solid #0c2a7c;;
 }
 
 .testim .arrow {
@@ -944,3 +962,592 @@ body{
 .animate-fade-in {
     animation: fadeInUp 0.8s ease-out;
 }
+
+
+/*contact*/
+/* Base Container */
+
+/* Header Section */
+.cu-header {
+    text-align: center;
+    margin-bottom: 60px;
+    animation: cu-fadeInUp 0.8s ease-out;
+}
+
+.cu-subtitle {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: black;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 16px;
+    background: var(--cu-primary-light);
+    padding: 8px 16px;
+    border-radius: 50px;
+}
+
+.cu-title {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 700;
+    color: var(--cu-dark);
+    line-height: 1.2;
+    margin-bottom: 20px;
+    letter-spacing: -0.02em;
+}
+
+.cu-description {
+    font-size: 1.125rem;
+    color: var(--cu-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+/* Main Grid Layout */
+.cu-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+@media (min-width: 992px) {
+    .cu-grid {
+        grid-template-columns: 1fr 1.2fr;
+        gap: 60px;
+    }
+}
+
+/* Contact Info Cards */
+.cu-info-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.cu-info-card {
+    background: white;
+    padding: 32px;
+    border-radius: var(--cu-radius-lg);
+    box-shadow: var(--cu-shadow);
+    border: 1px solid var(--cu-border);
+    transition: var(--cu-transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.cu-info-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: #0c2a7c;
+    transform: scaleY(0);
+    transition: transform 0.3s ease;
+}
+
+.cu-info-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.1);
+}
+
+.cu-info-card:hover::before {
+    transform: scaleY(1);
+}
+
+.cu-section{
+    margin-top: 100px;
+}
+
+.cu-info-icon {
+    width: 56px;
+    height: 56px;
+    background: linear-gradient(135deg, #0c2a7c 0%, #0a58ca 100%) !important;
+    border-radius: var(--cu-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    color: black;
+    font-size: 24px;
+    transition: var(--cu-transition);
+}
+.cu-info-icon i{
+    color: white;
+}
+.cu-info-card:hover .cu-info-icon {
+    background: linear-gradient(135deg, #0c2a7c 0%, #0a58ca 100%) !important;
+    color: white;
+    transform: scale(1.1) rotate(5deg);
+}
+
+.cu-info-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--cu-dark);
+    margin-bottom: 8px;
+}
+
+.cu-info-text {
+    color: var(--cu-secondary);
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.cu-info-link {
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: var(--cu-transition);
+    position: relative;
+}
+
+.cu-info-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #0c2a7c;
+    transition: width 0.3s ease;
+}
+
+.cu-info-link:hover {
+    color: var(--cu-primary-dark);
+    gap: 10px;
+}
+
+.cu-info-link:hover::after {
+    width: 100%;
+}
+
+/* Social Links */
+.cu-social {
+    display: flex;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.cu-social-link {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--cu-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--cu-secondary);
+    text-decoration: none;
+    transition: var(--cu-transition);
+    border: 1px solid var(--cu-border);
+}
+
+.cu-social-link:hover {
+    background: black;
+    color: var(--cu-white);
+    border-color: black;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px -5px rgba(37, 99, 235, 0.3);
+}
+
+/* Contact Form */
+.cu-form-wrapper {
+    background: var(--cu-white);
+    padding: 48px;
+    border-radius: var(--cu-radius-lg);
+    box-shadow: var(--cu-shadow-lg);
+    border: 1px solid var(--cu-border);
+    position: relative;
+    animation: cu-fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.cu-form-header {
+    margin-bottom: 32px;
+}
+
+.cu-form-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--cu-dark);
+    margin-bottom: 8px;
+}
+
+.cu-form-subtitle {
+    color: var(--cu-secondary);
+    font-size: 0.95rem;
+}
+
+.cu-form-group {
+    margin-bottom: 24px;
+    position: relative;
+}
+
+.cu-form-label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--cu-dark);
+    margin-bottom: 8px;
+    transition: var(--cu-transition);
+}
+
+.cu-form-input,
+.cu-form-textarea {
+    width: 100%;
+    padding: 14px 18px;
+    border: 2px solid var(--cu-border);
+    border-radius: var(--cu-radius);
+    font-size: 1rem;
+    font-family: inherit;
+    background: var(--cu-white);
+    color: var(--cu-dark);
+    transition: var(--cu-transition);
+}
+
+.cu-form-input:focus,
+.cu-form-textarea:focus {
+    outline: none;
+    border-color: black;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+    background: var(--cu-white);
+}
+
+.cu-form-input::placeholder,
+.cu-form-textarea::placeholder {
+    color: #94a3b8;
+}
+
+.cu-form-textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+.cu-form-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+}
+
+@media (min-width: 576px) {
+    .cu-form-row {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Floating Label Effect */
+.cu-form-floating {
+    position: relative;
+}
+
+.cu-form-floating .cu-form-label {
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--cu-white);
+    padding: 0 6px;
+    color: var(--cu-secondary);
+    pointer-events: none;
+    transition: var(--cu-transition);
+}
+
+.cu-form-floating .cu-form-input:focus ~ .cu-form-label,
+.cu-form-floating .cu-form-input:not(:placeholder-shown) ~ .cu-form-label,
+.cu-form-floating .cu-form-textarea:focus ~ .cu-form-label,
+.cu-form-floating .cu-form-textarea:not(:placeholder-shown) ~ .cu-form-label {
+    top: 0;
+    font-size: 0.75rem;
+    color: black;
+    font-weight: 600;
+}
+
+.cu-form-floating .cu-form-textarea ~ .cu-form-label {
+    top: 24px;
+}
+
+/* Checkbox */
+.cu-checkbox-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.cu-checkbox {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--cu-border);
+    border-radius: 6px;
+    appearance: none;
+    cursor: pointer;
+    position: relative;
+    transition: var(--cu-transition);
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.cu-checkbox:checked {
+    background: black;
+    border-color: black;
+}
+
+.cu-checkbox:checked::after {
+    content: '✓';
+    position: absolute;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.cu-checkbox-label {
+    font-size: 0.875rem;
+    color: var(--cu-secondary);
+    line-height: 1.5;
+    cursor: pointer;
+}
+
+.cu-checkbox-label a {
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.cu-checkbox-label a:hover {
+    text-decoration: underline;
+}
+
+/* Submit Button */
+.cu-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 16px 32px;
+    background: linear-gradient(135deg, #0c2a7c 0%, #0a58ca 100%) !important;
+    color: var(--cu-white);
+    border: none;
+    border-radius: var(--cu-radius);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--cu-transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.cu-btn:hover {
+    background: linear-gradient(254deg, #0c2a7c 0%, #0a58ca 100%) !important; 
+}
+
+.cu-btn:active {
+    transform: translateY(0);
+}
+
+.cu-btn i {
+    transition: transform 0.3s ease;
+}
+
+.cu-btn:hover i {
+    transform: translateX(4px);
+}
+
+/* Success Message */
+.cu-alert {
+    padding: 16px 20px;
+    border-radius: var(--cu-radius);
+    margin-bottom: 24px;
+    display: none;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.95rem;
+}
+
+.cu-alert-success {
+    background: #d1fae5;
+    color: #065f46;
+    border: 1px solid #a7f3d0;
+}
+
+.cu-alert-error {
+    background: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #fecaca;
+}
+
+.cu-alert.show {
+    display: flex;
+    animation: cu-slideIn 0.4s ease;
+}
+
+/* Map Section */
+.cu-map {
+    margin-top: 80px;
+    border-radius: var(--cu-radius-lg);
+    overflow: hidden;
+    box-shadow: var(--cu-shadow-lg);
+    height: 400px;
+    position: relative;
+    background: var(--cu-light);
+}
+
+.cu-map iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    filter: grayscale(20%) contrast(1.1);
+}
+
+/* FAQ Section */
+.cu-faq {
+    margin-top: 80px;
+}
+
+.cu-faq-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: black;
+    margin-bottom: 40px;
+}
+
+.cu-accordion {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cu-accordion-item {
+    background: white;
+    border: 1px solid var(--cu-border);
+    border-radius: var(--cu-radius);
+    margin-bottom: 16px;
+    overflow: hidden;
+    box-shadow: var(--cu-shadow-sm);
+}
+
+.cu-accordion-header {
+    width: 100%;
+    padding: 20px 24px;
+    background: none;
+    border: none;
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 600;
+    color: black;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: var(--cu-transition);
+}
+
+.cu-accordion-header:hover {
+    background: var(--cu-light);
+    color: black;
+}
+
+.cu-accordion-header i {
+    transition: transform 0.3s ease;
+    color: black;
+}
+
+.cu-accordion-item.active .cu-accordion-header i {
+    transform: rotate(180deg);
+}
+
+.cu-accordion-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding: 0 24px;
+}
+
+.cu-accordion-item.active .cu-accordion-body {
+    max-height: 200px;
+    padding-bottom: 20px;
+}
+
+.cu-accordion-content {
+    color: var(--cu-secondary);
+    line-height: 1.6;
+}
+
+/* Animations */
+@keyframes cu-fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes cu-slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Loading State */
+.cu-btn.loading {
+    pointer-events: none;
+    opacity: 0.8;
+}
+
+.cu-btn.loading::after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    border: 2px solid transparent;
+    border-top-color: white;
+    border-radius: 50%;
+    animation: cu-spin 0.8s linear infinite;
+}
+
+@keyframes cu-spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .cu-section {
+        padding: 40px 0;
+    }
+
+    .cu-form-wrapper {
+        padding: 32px 24px;
+    }
+
+    .cu-info-card {
+        padding: 24px;
+    }
+
+    .cu-map {
+        height: 300px;
+        margin-top: 40px;
+    }
+}
+
+/* Utility Classes (isolated) */
+.cu-text-center { text-align: center; }
+.cu-mt-4 { margin-top: 1.5rem; }
+.cu-mb-0 { margin-bottom: 0; }

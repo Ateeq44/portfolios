@@ -25,9 +25,33 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="{{ url('portfolios') }}">Portfolio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{ url('about') }}">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{ url('contact') }}">Contact Us</a></li>
+                    <li class="nav-item">
+    <a class="nav-link {{ request()->routeIs('home') ? 'active' : '' }}"
+       href="{{ route('home') }}">
+        Home
+    </a>
+</li>
+
+<li class="nav-item">
+    <a class="nav-link {{ request()->routeIs('portfolios.index') ? 'active' : '' }}"
+       href="{{ route('portfolios.index') }}">
+        Portfolio
+    </a>
+</li>
+
+<li class="nav-item">
+    <a class="nav-link {{ request()->routeIs('portfolios.about') ? 'active' : '' }}"
+       href="{{ route('portfolios.about') }}">
+        About Us
+    </a>
+</li>
+
+<li class="nav-item">
+    <a class="nav-link {{ request()->routeIs('portfolios.contact') ? 'active' : '' }}"
+       href="{{ route('portfolios.contact') }}">
+        Contact Us
+    </a>
+</li>
                     <li class="nav-item m-hidden"><a class="btn btn-gradient-primary text-white ms-2 px-4" href="#contact">Start Your Project</a></li>
                 </ul>
             </div>

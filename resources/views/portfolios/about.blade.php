@@ -1,5 +1,5 @@
 @extends('layouts.app_front')
-@section('title','Portfolios')
+@section('title','About')
 <style>
     main{
         margin-top: 130px !important;
