@@ -252,7 +252,7 @@ return '
                 {{-- Card Footer with CTA --}}
                 @if($project->reference_url)
                 <div class="card-footer bg-light border-0 p-4 rounded-bottom-4">
-                    <a href="{{ $project->reference_url }}" target="_blank" class="btn btn-primary w-100 rounded-pill py-3 fw-bold d-flex align-items-center justify-content-center gap-2 hover-lift shadow-sm">
+                    <a href="{{ $project->reference_url }}" target="_blank" class="btn btn-primary w-25 rounded-pill py-3 fw-bold d-flex align-items-center justify-content-center gap-2 hover-lift shadow-sm">
                         <span>Visit Project</span>
                         <i class="bi bi-arrow-right-circle-fill"></i>
                     </a>
