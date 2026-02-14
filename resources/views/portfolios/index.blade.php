@@ -8,6 +8,9 @@
         transform: translateY(-3px);
         box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1) !important;
     }
+    .jkfl{
+        padding-right: 20px;
+    }
 </style>
 @section('content')
 <section class="hero-section header-section ">
@@ -36,7 +39,7 @@
                         <div>
                             <span class="badge bg-gradient-primary my-3">{{ $p->category->name ?? 'Uncategorized' }}</span>
                             <h5 class="card-title">{{ $p->title }}</h5>
-                            <p class="card-text text-muted">{{ $p->short_description }}</p>
+                            <p class="card-text text-muted jkfl">{{ $p->short_description }}</p>
                         </div>
 
                         <div class="pt-3 mt-3">
@@ -49,7 +52,7 @@
                     <!-- Right Side: Image -->
                     @if($p->cover_image_path)
                     <div style="flex: 0 0 40%; max-width: 500px;" class="img-cover-portf">
-                        <img src="{{ asset($p->cover_image_path) }}" class="w-100" alt="cover" style="object-fit: cover;">
+                        <img src="{{ asset($p->cover_image_path) }}" class="w-100" alt="cover" style="object-fit: cover; height: 226.38px;">
                     </div>
                     @else
                     <div class="bg-light d-flex align-items-center justify-content-center" style="flex: 0 0 40%; max-width: 350px;">
