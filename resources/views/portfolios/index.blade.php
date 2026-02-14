@@ -4,6 +4,10 @@
     main{
         margin-top: 130px !important;
     }
+    .por-item:hover{
+        transform: translateY(-3px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1) !important;
+    }
 </style>
 @section('content')
 <section class="hero-section header-section ">
@@ -22,10 +26,10 @@
 </section>
 <div class="container mt-4">
 
-    <div class="row">
+    <div class="row g-4">
         @forelse($items as $p)
         <div class="col-md-12 col-lg-12">
-            <div class="card shadow-sm flex-row overflow-hidden">
+            <div class="card shadow-sm flex-row overflow-hidden por-item">
                 <!-- Left Side: Content -->
                 <div class="card-body d-flex flex-row justify-content-between" style="flex: 1;">
                     <div>
