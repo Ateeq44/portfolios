@@ -2,13 +2,6 @@
 @section('title', 'Home')
 
 @section('content')
-    <style>
-        
-    </style>
-</head>
-<body>
-
-
 <!-- 1. HERO SECTION -->
 <section class="hero-section">
     <div class="container">
@@ -43,7 +36,7 @@
                 <h2 class="display-5 fw-bold">End-to-end product development for the digital age</h2>
             </div>
         </div>
-        
+
         <div class="row g-4">
             <!-- Service 1 -->
             <div class="col-md-6 col-lg-4">
@@ -58,7 +51,7 @@
                     </p>
                 </div>
             </div>
-            
+
             <!-- Service 2 -->
             <div class="col-md-6 col-lg-4">
                 <div class="service-card h-100 p-4">
@@ -72,7 +65,7 @@
                     </p>
                 </div>
             </div>
-            
+
             <!-- Service 3 -->
             <div class="col-md-6 col-lg-4">
                 <div class="service-card h-100 p-4">
@@ -86,7 +79,7 @@
                     </p>
                 </div>
             </div>
-            
+
             <!-- Service 4 -->
             <div class="col-md-6 col-lg-4">
                 <div class="service-card h-100 p-4">
@@ -100,7 +93,7 @@
                     </p>
                 </div>
             </div>
-            
+
             <!-- Service 5 -->
             <div class="col-md-6 col-lg-4">
                 <div class="service-card h-100 p-4">
@@ -114,7 +107,7 @@
                     </p>
                 </div>
             </div>
-            
+
             <!-- Service 6 -->
             <div class="col-md-6 col-lg-4">
                 <div class="service-card h-100 p-4">
@@ -147,7 +140,7 @@
                     great software is born from deep collaboration. Since 2022, we've helped 40+ companies 
                     launch products that matter.
                 </p>
-                
+
                 <div class="row g-4 mt-2">
                     <div class="col-6">
                         <h3 class="fw-bold text-primary">40+</h3>
@@ -166,7 +159,7 @@
                         <p class="mb-0">Client Retention</p>
                     </div>
                 </div>
-                
+
                 <a href="#team" class="btn btn-dark mt-4">Meet Our Team</a>
             </div>
             <div class="col-lg-6">
@@ -185,58 +178,311 @@
 </section>
 
 <!-- 5. TESTIMONIALS SECTION -->
-<section id="testim" class="testim mt-5">
-    <div class="testim-cover">
-        <div class="wrap">
-            <span id="right-arrow" class="arrow right fa fa-chevron-right"></span>
-            <span id="left-arrow" class="arrow left fa fa-chevron-left "></span>
-            <ul id="testim-dots" class="dots">
-                <li class="dot active"></li>
-                <li class="dot"></li>
-                <li class="dot"></li>
-                <li class="dot"></li>
-                <li class="dot"></li>
-            </ul>
-            <div id="testim-content" class="cont">
-                <div class="active">
-                    <div class="img">
-                        <img src="{{ asset('images/test-icon.png') }}" alt="">
+
+<div class="container bg-body-tertiary py-3">
+    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4500">
+        <div class="carousel-inner">
+
+            {{-- 1 --}}
+            <div class="carousel-item active">
+                <div class="card shadow-sm rounded-3 p-2">
+                    <div class="quotes display-2 text-body-tertiary">
+                        <i class="bi bi-quote"></i>
                     </div>
-                    <h2>Lorem P. Ipsum</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-                </div>
-                <div>
-                    <div class="img">
-                        <img src="{{ asset('images/test-icon.png') }}" alt="">
+                    <div class="card-body">
+                        <p class="card-text">“Clear communication and a very organized workflow. The final delivery was polished, fast, and production-ready.”</p>
+                        <div class="d-flex align-items-center pt-4">
+                            <img src="{{ asset('images/test-icon.png') }}" class="rounded-circle me-3" width="48" height="48" alt="Client">
+                            <div>
+                                <h5 class="card-title fw-bold mb-0">Michael R.</h5>
+                                <span class="text-secondary">Founder, Product Studio</span>
+                            </div>
+                        </div>
                     </div>
-                    <h2>Mr. Lorem Ipsum</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-                </div>
-                <div>
-                    <div class="img">
-                        <img src="{{ asset('images/test-icon.png') }}" alt="">
-                    </div>
-                    <h2>Lorem Ipsum</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-                </div>
-                <div>
-                    <div class="img">
-                        <img src="{{ asset('images/test-icon.png') }}" alt="">
-                    </div>
-                    <h2>Lorem De Ipsum</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-                </div>
-                <div>
-                    <div class="img">
-                        <img src="{{ asset('images/test-icon.png') }}" alt="">
-                    </div>
-                    <h2>Ms. Lorem R. Ipsum</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
                 </div>
             </div>
+
+            {{-- 2 --}}
+            <div class="carousel-item">
+                <div class="card shadow-sm rounded-3 p-2">
+                    <div class="quotes display-2 text-body-tertiary">
+                        <i class="bi bi-quote"></i>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">“Clean UI with strong attention to detail. Everything is responsive and loads quickly across devices.”</p>
+                        <div class="d-flex align-items-center pt-4">
+                            <img src="{{ asset('images/test-icon.png') }}" class="rounded-circle me-3" width="48" height="48" alt="Client">
+                            <div>
+                                <h5 class="card-title fw-bold mb-0">Sara K.</h5>
+                                <span class="text-secondary">Product Owner, SaaS Team</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {{-- 3 --}}
+            <div class="carousel-item">
+                <div class="card shadow-sm rounded-3 p-2">
+                    <div class="quotes display-2 text-body-tertiary">
+                        <i class="bi bi-quote"></i>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">“The admin panel is smooth and easy to manage. The structure is clean and future updates will be simple.”</p>
+                        <div class="d-flex align-items-center pt-4">
+                            <img src="{{ asset('images/test-icon.png') }}" class="rounded-circle me-3" width="48" height="48" alt="Client">
+                            <div>
+                                <h5 class="card-title fw-bold mb-0">Daniel M.</h5>
+                                <span class="text-secondary">Operations Manager, Services Co.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {{-- 4 --}}
+            <div class="carousel-item">
+                <div class="card shadow-sm rounded-3 p-2">
+                    <div class="quotes display-2 text-body-tertiary">
+                        <i class="bi bi-quote"></i>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">“Very professional delivery. The case study documentation clearly explains the decisions and outcomes.”</p>
+                        <div class="d-flex align-items-center pt-4">
+                            <img src="{{ asset('images/test-icon.png') }}" class="rounded-circle me-3" width="48" height="48" alt="Client">
+                            <div>
+                                <h5 class="card-title fw-bold mb-0">Emily J.</h5>
+                                <span class="text-secondary">Startup Lead, EdTech</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {{-- 5 --}}
+            <div class="carousel-item">
+                <div class="card shadow-sm rounded-3 p-2">
+                    <div class="quotes display-2 text-body-tertiary">
+                        <i class="bi bi-quote"></i>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">“Fast turnaround and helpful suggestions throughout. The final output matched the reference and exceeded expectations.”</p>
+                        <div class="d-flex align-items-center pt-4">
+                            <img src="{{ asset('images/test-icon.png') }}" class="rounded-circle me-3" width="48" height="48" alt="Client">
+                            <div>
+                                <h5 class="card-title fw-bold mb-0">Ahmed H.</h5>
+                                <span class="text-secondary">Business Owner, Local Brand</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {{-- 6 --}}
+            <div class="carousel-item">
+                <div class="card shadow-sm rounded-3 p-2">
+                    <div class="quotes display-2 text-body-tertiary">
+                        <i class="bi bi-quote"></i>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">“Great collaboration and clean project structure. The codebase is easy to maintain and extend.”</p>
+                        <div class="d-flex align-items-center pt-4">
+                            <img src="{{ asset('images/test-icon.png') }}" class="rounded-circle me-3" width="48" height="48" alt="Client">
+                            <div>
+                                <h5 class="card-title fw-bold mb-0">James L.</h5>
+                                <span class="text-secondary">Tech Lead, Agency Partner</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {{-- 7 --}}
+            <div class="carousel-item">
+                <div class="card shadow-sm rounded-3 p-2">
+                    <div class="quotes display-2 text-body-tertiary">
+                        <i class="bi bi-quote"></i>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">“Milestone-based progress kept everything on track. Each update was clear and well documented.”</p>
+                        <div class="d-flex align-items-center pt-4">
+                            <img src="{{ asset('images/test-icon.png') }}" class="rounded-circle me-3" width="48" height="48" alt="Client">
+                            <div>
+                                <h5 class="card-title fw-bold mb-0">Hannah S.</h5>
+                                <span class="text-secondary">Project Manager, Consulting</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {{-- 8 --}}
+            <div class="carousel-item">
+                <div class="card shadow-sm rounded-3 p-2">
+                    <div class="quotes display-2 text-body-tertiary">
+                        <i class="bi bi-quote"></i>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">“The UX is simple and effective. The portfolio layout makes projects look premium and credible.”</p>
+                        <div class="d-flex align-items-center pt-4">
+                            <img src="{{ asset('images/test-icon.png') }}" class="rounded-circle me-3" width="48" height="48" alt="Client">
+                            <div>
+                                <h5 class="card-title fw-bold mb-0">Olivia P.</h5>
+                                <span class="text-secondary">Marketing Manager, B2B</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {{-- 9 --}}
+            <div class="carousel-item">
+                <div class="card shadow-sm rounded-3 p-2">
+                    <div class="quotes display-2 text-body-tertiary">
+                        <i class="bi bi-quote"></i>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">“Secure roles and permissions were implemented properly. Everything feels stable and production-ready.”</p>
+                        <div class="d-flex align-items-center pt-4">
+                            <img src="{{ asset('images/test-icon.png') }}" class="rounded-circle me-3" width="48" height="48" alt="Client">
+                            <div>
+                                <h5 class="card-title fw-bold mb-0">Umar F.</h5>
+                                <span class="text-secondary">Operations Lead, Logistics</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {{-- 10 --}}
+            <div class="carousel-item">
+                <div class="card shadow-sm rounded-3 p-2">
+                    <div class="quotes display-2 text-body-tertiary">
+                        <i class="bi bi-quote"></i>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">“Professional design and consistent layout. The website communicates trust and makes it easy to browse work.”</p>
+                        <div class="d-flex align-items-center pt-4">
+                            <img src="{{ asset('images/test-icon.png') }}" class="rounded-circle me-3" width="48" height="48" alt="Client">
+                            <div>
+                                <h5 class="card-title fw-bold mb-0">Isabella T.</h5>
+                                <span class="text-secondary">Entrepreneur, Online Business</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {{-- 11 --}}
+            <div class="carousel-item">
+                <div class="card shadow-sm rounded-3 p-2">
+                    <div class="quotes display-2 text-body-tertiary">
+                        <i class="bi bi-quote"></i>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">“High quality work with fast support. Every issue was fixed quickly and professionally.”</p>
+                        <div class="d-flex align-items-center pt-4">
+                            <img src="{{ asset('images/test-icon.png') }}" class="rounded-circle me-3" width="48" height="48" alt="Client">
+                            <div>
+                                <h5 class="card-title fw-bold mb-0">Bilal A.</h5>
+                                <span class="text-secondary">Founder, Service Business</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {{-- 12 --}}
+            <div class="carousel-item">
+                <div class="card shadow-sm rounded-3 p-2">
+                    <div class="quotes display-2 text-body-tertiary">
+                        <i class="bi bi-quote"></i>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">“Great structure and documentation. The case study format helps clients understand the process clearly.”</p>
+                        <div class="d-flex align-items-center pt-4">
+                            <img src="{{ asset('images/test-icon.png') }}" class="rounded-circle me-3" width="48" height="48" alt="Client">
+                            <div>
+                                <h5 class="card-title fw-bold mb-0">Jessica W.</h5>
+                                <span class="text-secondary">Consultant, Product Strategy</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {{-- 13 --}}
+            <div class="carousel-item">
+                <div class="card shadow-sm rounded-3 p-2">
+                    <div class="quotes display-2 text-body-tertiary">
+                        <i class="bi bi-quote"></i>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">“Strong technical implementation and clean database design. Everything works smoothly and performs well.”</p>
+                        <div class="d-flex align-items-center pt-4">
+                            <img src="{{ asset('images/test-icon.png') }}" class="rounded-circle me-3" width="48" height="48" alt="Client">
+                            <div>
+                                <h5 class="card-title fw-bold mb-0">Yasir M.</h5>
+                                <span class="text-secondary">Operations Lead, Retail Tech</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {{-- 14 --}}
+            <div class="carousel-item">
+                <div class="card shadow-sm rounded-3 p-2">
+                    <div class="quotes display-2 text-body-tertiary">
+                        <i class="bi bi-quote"></i>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">“The interface is modern and the UX is straightforward. Great experience from start to finish.”</p>
+                        <div class="d-flex align-items-center pt-4">
+                            <img src="{{ asset('images/test-icon.png') }}" class="rounded-circle me-3" width="48" height="48" alt="Client">
+                            <div>
+                                <h5 class="card-title fw-bold mb-0">Chloe N.</h5>
+                                <span class="text-secondary">Product Manager, SaaS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {{-- 15 --}}
+            <div class="carousel-item">
+                <div class="card shadow-sm rounded-3 p-2">
+                    <div class="quotes display-2 text-body-tertiary">
+                        <i class="bi bi-quote"></i>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">“Highly recommended. Professional communication, clean delivery, and a premium-looking portfolio website.”</p>
+                        <div class="d-flex align-items-center pt-4">
+                            <img src="{{ asset('images/test-icon.png') }}" class="rounded-circle me-3" width="48" height="48" alt="Client">
+                            <div>
+                                <h5 class="card-title fw-bold mb-0">Adeel R.</h5>
+                                <span class="text-secondary">Business Owner, SME</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+
+        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
-</section>
+</div>
+
+
 
 <!-- 6. EXPERTISE/TECH STACK SECTION -->
 <section id="expertise" class="py-5">
@@ -247,7 +493,7 @@
                 <h2 class="display-5 fw-bold">Deep technical capabilities across the modern stack</h2>
             </div>
         </div>
-        
+
         <div class="row g-5">
             <!-- Domains -->
             <div class="col-lg-6">
@@ -303,7 +549,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Tech Stack -->
             <div class="col-lg-6">
                 <h4 class="fw-bold mb-4">Technologies We Master</h4>
@@ -371,7 +617,7 @@
                 <h2 class="display-5 fw-bold">Engineering excellence meets business acumen</h2>
             </div>
         </div>
-        
+
         <div class="row g-4">
             <div class="col-md-6 col-lg-4">
                 <div class="bg-white p-4 rounded-4 h-100 shadow-sm">
@@ -382,7 +628,7 @@
                     </p>
                 </div>
             </div>
-            
+
             <div class="col-md-6 col-lg-4">
                 <div class="bg-white p-4 rounded-4 h-100 shadow-sm">
                     <h5>Enterprise-Grade Security</h5>
@@ -392,7 +638,7 @@
                     </p>
                 </div>
             </div>
-            
+
             <div class="col-md-6 col-lg-4">
                 <div class="bg-white p-4 rounded-4 h-100 shadow-sm">
                     <h5>Scalable Architecture</h5>
@@ -402,7 +648,7 @@
                     </p>
                 </div>
             </div>
-            
+
             <div class="col-md-6 col-lg-4">
                 <div class="bg-white p-4 rounded-4 h-100 shadow-sm">
                     <h5>Dedicated Teams</h5>
@@ -412,7 +658,7 @@
                     </p>
                 </div>
             </div>
-            
+
             <div class="col-md-6 col-lg-4">
                 <div class="bg-white p-4 rounded-4 h-100 shadow-sm">
                     <h5>Strategic Consulting</h5>
@@ -422,7 +668,7 @@
                     </p>
                 </div>
             </div>
-            
+
             <div class="col-md-6 col-lg-4">
                 <div class="bg-white p-4 rounded-4 h-100 shadow-sm">
                     <h5>Lifetime Support</h5>
