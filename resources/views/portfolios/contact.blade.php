@@ -107,7 +107,7 @@
                         
                         <div class="cu-form-group cu-form-floating">
                             <input type="tel" class="cu-form-input" id="cuPhone" name="phone" placeholder=" ">
-                            <label for="cuPhone" class="cu-form-label">Phone Number (Optional)</label>
+                            <label for="cuPhone" class="cu-form-label">Phone Number</label>
                         </div>
                     </div>
 
