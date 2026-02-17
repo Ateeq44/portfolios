@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\PortfolioCategoryController;
 use App\Http\Controllers\Admin\PortfolioProjectController;
 use App\Http\Controllers\Front\PortfolioController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ContactController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
@@ -15,6 +16,7 @@ Route::get('/portfolios', [PortfolioController::class, 'index'])->name('portfoli
 Route::get('/portfolios/{project:slug}', [PortfolioController::class, 'show'])->name('portfolios.show');
 Route::get('/about', [PortfolioController::class, 'about'])->name('portfolios.about');
 Route::get('/contact', [PortfolioController::class, 'contact'])->name('portfolios.contact');
+Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
 
 // Admin
 Route::middleware(['auth','admin'])->prefix('admin')->name('admin.')->group(function () {

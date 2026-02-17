@@ -61,6 +61,12 @@ return [
             // ],
         ],
 
+        'contact_to' => [
+            'address' => env('CONTACT_TO_ADDRESS', 'admin@example.com'),
+            'name'    => env('CONTACT_TO_NAME', 'Admin'),
+        ],
+
+
         'resend' => [
             'transport' => 'resend',
         ],

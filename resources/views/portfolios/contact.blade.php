@@ -75,49 +75,63 @@
                 </div>
 
                 <!-- Alert Messages -->
-                <div class="cu-alert cu-alert-success" id="cuSuccessAlert">
+                <!-- <div class="cu-alert cu-alert-success" id="cuSuccessAlert">
                     <i class="bi bi-check-circle-fill"></i>
                     <span>Thank you! Your message has been sent successfully.</span>
                 </div>
                 <div class="cu-alert cu-alert-error" id="cuErrorAlert">
                     <i class="bi bi-exclamation-circle-fill"></i>
                     <span>Oops! Something went wrong. Please try again.</span>
-                </div>
+                </div> -->
 
-                <form id="cuContactForm" action="#" method="POST">
+                @if (session('success'))
+                <div class="alert alert-success">{{ session('success') }}</div>
+                @endif
+
+                @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul class="mb-0">
+                        @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+                @endif
+
+                <form id="cuContactForm" action="{{ route('contact.store') }}" method="POST">
                     @csrf
                     
                     <div class="cu-form-row">
                         <div class="cu-form-group cu-form-floating">
-                            <input type="text" class="cu-form-input" id="cuFirstName" name="first_name" placeholder=" " required>
+                            <input type="text" class="cu-form-input text-dark" id="cuFirstName" name="first_name" placeholder=" " required>
                             <label for="cuFirstName" class="cu-form-label">First Name</label>
                         </div>
                         
                         <div class="cu-form-group cu-form-floating">
-                            <input type="text" class="cu-form-input" id="cuLastName" name="last_name" placeholder=" " required>
+                            <input type="text" class="cu-form-input text-dark" id="cuLastName" name="last_name" placeholder=" " required>
                             <label for="cuLastName" class="cu-form-label">Last Name</label>
                         </div>
                     </div>
 
                     <div class="cu-form-row">
                         <div class="cu-form-group cu-form-floating">
-                            <input type="email" class="cu-form-input" id="cuEmail" name="email" placeholder=" " required>
+                            <input type="email" class="cu-form-input text-dark" id="cuEmail" name="email" placeholder=" " required>
                             <label for="cuEmail" class="cu-form-label">Email Address</label>
                         </div>
                         
                         <div class="cu-form-group cu-form-floating">
-                            <input type="tel" class="cu-form-input" id="cuPhone" name="phone" placeholder=" ">
+                            <input type="tel" class="cu-form-input text-dark" id="cuPhone" name="phone" placeholder=" ">
                             <label for="cuPhone" class="cu-form-label">Phone Number</label>
                         </div>
                     </div>
 
                     <div class="cu-form-group cu-form-floating">
-                        <input type="text" class="cu-form-input" id="cuSubject" name="subject" placeholder=" " required>
+                        <input type="text" class="cu-form-input text-dark" id="cuSubject" name="subject" placeholder=" " required>
                         <label for="cuSubject" class="cu-form-label">Subject</label>
                     </div>
 
                     <div class="cu-form-group cu-form-floating">
-                        <textarea class="cu-form-textarea" id="cuMessage" name="message" placeholder=" " required></textarea>
+                        <textarea class="cu-form-textarea text-dark" id="cuMessage" name="message" placeholder=" " required></textarea>
                         <label for="cuMessage" class="cu-form-label">Your Message</label>
                     </div>
 
@@ -136,51 +150,51 @@
             </div>
 
         </div>
-    <!-- FAQ Section -->
-    <div class="cu-faq">
-        <h2 class="cu-faq-title">Frequently Asked Questions</h2>
-        <div class="cu-accordion">
+        <!-- FAQ Section -->
+        <div class="cu-faq">
+            <h2 class="cu-faq-title">Frequently Asked Questions</h2>
+            <div class="cu-accordion">
 
-            <div class="cu-accordion-item">
-                <button class="cu-accordion-header" onclick="this.parentElement.classList.toggle('active')">
-                    <span>What is the typical response time for inquiries?</span>
-                    <i class="bi bi-chevron-down"></i>
-                </button>
-                <div class="cu-accordion-body">
-                    <div class="cu-accordion-content">
-                        We aim to respond to all inquiries within 24 hours during business days. For urgent matters, please call our support line directly for immediate assistance.
+                <div class="cu-accordion-item">
+                    <button class="cu-accordion-header" onclick="this.parentElement.classList.toggle('active')">
+                        <span>What is the typical response time for inquiries?</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </button>
+                    <div class="cu-accordion-body">
+                        <div class="cu-accordion-content">
+                            We aim to respond to all inquiries within 24 hours during business days. For urgent matters, please call our support line directly for immediate assistance.
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="cu-accordion-item">
-                <button class="cu-accordion-header" onclick="this.parentElement.classList.toggle('active')">
-                    <span>Do you offer custom enterprise solutions?</span>
-                    <i class="bi bi-chevron-down"></i>
-                </button>
-                <div class="cu-accordion-body">
-                    <div class="cu-accordion-content">
-                        Yes, we specialize in custom enterprise solutions tailored to your specific business needs. Contact our sales team to schedule a consultation.
+                <div class="cu-accordion-item">
+                    <button class="cu-accordion-header" onclick="this.parentElement.classList.toggle('active')">
+                        <span>Do you offer custom enterprise solutions?</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </button>
+                    <div class="cu-accordion-body">
+                        <div class="cu-accordion-content">
+                            Yes, we specialize in custom enterprise solutions tailored to your specific business needs. Contact our sales team to schedule a consultation.
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="cu-accordion-item">
-                <button class="cu-accordion-header" onclick="this.parentElement.classList.toggle('active')">
-                    <span>How can I schedule a demo or meeting?</span>
-                    <i class="bi bi-chevron-down"></i>
-                </button>
-                <div class="cu-accordion-body">
-                    <div class="cu-accordion-content">
-                        You can schedule a demo by filling out the contact form above and selecting "Demo Request" as the subject, or by emailing us directly at demo@company.com.
+                <div class="cu-accordion-item">
+                    <button class="cu-accordion-header" onclick="this.parentElement.classList.toggle('active')">
+                        <span>How can I schedule a demo or meeting?</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </button>
+                    <div class="cu-accordion-body">
+                        <div class="cu-accordion-content">
+                            You can schedule a demo by filling out the contact form above and selecting "Demo Request" as the subject, or by emailing us directly at demo@company.com.
+                        </div>
                     </div>
                 </div>
-            </div>
 
+            </div>
         </div>
-    </div>
 
-</div>
+    </div>
 </section>
 
 @endsection
