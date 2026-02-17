@@ -4,11 +4,11 @@
 <body style="font-family: Arial, sans-serif;">
   <h2>Thanks for contacting us!</h2>
 
-  <p>Hi {{ $contact->first_name }},</p>
+  <p>Hi {{ $contact->first_name }} {{ $contact->last_name }},</p>
 
   <p>
     We’ve received your message and our team will get back to you as soon as possible
-    (usually within 24 hours).
+    (usually within 12-24 hours).
   </p>
 
   <hr>
@@ -19,6 +19,6 @@
 
   <hr>
 
-  <p>Regards,<br>{{ config('app.name') }}</p>
+  <p>Regards,<br>ARU WebTech</p>
 </body>
 </html>
