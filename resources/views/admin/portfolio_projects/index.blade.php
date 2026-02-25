@@ -53,7 +53,7 @@
                         @endif
                     </td>
                     <td class="d-flex gap-2">
-                        <a class="btn btn-sm btn-warning" href="{{ route('admin.portfolio-projects.edit', $p) }}">
+                        <a class="btn btn-sm btn-warning" style="margin-right: 12px;" href="{{ route('admin.portfolio-projects.edit', $p) }}">
                             <i class="fas fa-edit"></i> Edit
                         </a>
 

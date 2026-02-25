@@ -40,7 +40,7 @@
                         @endif
                     </td>
                     <td class="d-flex gap-2">
-                        <a class="btn btn-sm btn-warning" href="{{ route('admin.portfolio-categories.edit',$item) }}">
+                        <a class="btn btn-sm btn-warning" style="margin-right: 12px;" href="{{ route('admin.portfolio-categories.edit',$item) }}">
                             <i class="fas fa-edit"></i> Edit
                         </a>
                         <form method="POST"
