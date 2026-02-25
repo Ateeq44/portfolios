@@ -166,7 +166,7 @@ return '
                         <div class="d-flex align-items-center gap-3 mb-4 pb-3 border-bottom border-light">
                             <div class="flex-shrink-0">
                                 <div class="icon-box bg-gradient-primary text-white rounded-circle p-2 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
-                                    <i class="fa-solid fa-location-dot"></i>
+                                    <i class="bi bi-geo-alt"> text-white</i>
                                 </div>
                             </div>
                             <div>
@@ -179,7 +179,7 @@ return '
                         <div class="d-flex align-items-center gap-3 mb-4 pb-3 border-bottom border-light">
                             <div class="flex-shrink-0">
                                 <div class="icon-box bg-gradient-primary text-white text-success rounded-circle p-2 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
-                                    <i class="fa-regular fa-calendar-check"></i>
+                                    <i class="bi bi-calendar- text-whiterange"></i>
                                 </div>
                             </div>
                             <div>
@@ -192,7 +192,7 @@ return '
                         <div class="d-flex align-items-center gap-3 mb-4 pb-3 border-bottom border-light">
                             <div class="flex-shrink-0">
                                 <div class="icon-box bg-gradient-primary text-white text-warning rounded-circle p-2 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
-                                    <i class="fa-solid fa-industry"></i>
+                                    <i class="bi bi-briefcase text-white"></i>
                                 </div>
                             </div>
                             <div>
